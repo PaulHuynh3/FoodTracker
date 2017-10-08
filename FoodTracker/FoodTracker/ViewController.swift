@@ -2,24 +2,45 @@
 //  ViewController.swift
 //  FoodTracker
 //
-//  Created by Paul on 2017-10-07.
+//  Created by Paul on 2017-10-08.
 //  Copyright © 2017 Paul. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITextFieldDelegate {
+//all outlets are optionals that are forced unwrapped. if not set it will cause it to crash.
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var mealNameLabel: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Handle the text field’s user input through delegate callbacks.
+        nameTextField.delegate = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
+//actions
 
+    @IBAction func setDefaultLabelText(_ sender: UIButton) {
+        
+        mealNameLabel.text = "Default text"
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+    }
+    
+    
 
 }
 

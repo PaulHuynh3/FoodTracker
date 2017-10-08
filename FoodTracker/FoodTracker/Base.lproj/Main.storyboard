@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ZLW-TC-cJx">
+                                <rect key="frame" x="16" y="40" width="343" height="80.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mn7-uY-3Ff">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Meal Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FNE-5W-qCb">
+                                        <rect key="frame" x="0.0" y="20.5" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oj2-IE-OJd">
+                                        <rect key="frame" x="0.0" y="50.5" width="343" height="30"/>
+                                        <state key="normal" title="Set Default Label Text"/>
+                                        <connections>
+                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PDz-GJ-501"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FNE-5W-qCb" firstAttribute="top" secondItem="Mn7-uY-3Ff" secondAttribute="bottom" id="0L5-Pl-Vyr"/>
+                                    <constraint firstItem="Mn7-uY-3Ff" firstAttribute="top" secondItem="ZLW-TC-cJx" secondAttribute="top" id="14Y-TO-HzK"/>
+                                    <constraint firstItem="Mn7-uY-3Ff" firstAttribute="leading" secondItem="ZLW-TC-cJx" secondAttribute="leading" id="8T2-IN-K46"/>
+                                    <constraint firstItem="oj2-IE-OJd" firstAttribute="leading" secondItem="ZLW-TC-cJx" secondAttribute="leading" id="FxO-3M-oM3"/>
+                                    <constraint firstItem="FNE-5W-qCb" firstAttribute="leading" secondItem="ZLW-TC-cJx" secondAttribute="leading" id="KRj-QE-t4I"/>
+                                    <constraint firstItem="oj2-IE-OJd" firstAttribute="top" secondItem="FNE-5W-qCb" secondAttribute="bottom" id="RYI-Vh-IH7"/>
+                                    <constraint firstItem="oj2-IE-OJd" firstAttribute="top" secondItem="FNE-5W-qCb" secondAttribute="bottom" id="WcP-cf-UO2"/>
+                                    <constraint firstAttribute="trailing" secondItem="oj2-IE-OJd" secondAttribute="trailing" id="X75-uF-Tgj"/>
+                                    <constraint firstItem="FNE-5W-qCb" firstAttribute="top" secondItem="Mn7-uY-3Ff" secondAttribute="bottom" id="bov-yU-VZa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mn7-uY-3Ff" secondAttribute="trailing" id="o83-9A-M4l"/>
+                                    <constraint firstAttribute="trailing" secondItem="FNE-5W-qCb" secondAttribute="trailing" id="pzs-R3-Yve"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZLW-TC-cJx" secondAttribute="bottom" constant="546.5" id="8EL-wU-yIp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZLW-TC-cJx" secondAttribute="trailing" id="mmx-Zl-8aH"/>
+                            <constraint firstItem="ZLW-TC-cJx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pxg-aY-VWu"/>
+                            <constraint firstItem="ZLW-TC-cJx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="t8L-VC-RRf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mealNameLabel" destination="Mn7-uY-3Ff" id="mlW-Gd-L23"/>
+                        <outlet property="nameTextField" destination="FNE-5W-qCb" id="9Aw-p1-xgK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
