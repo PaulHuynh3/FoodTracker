@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
+    
+//Mark: properties
 //all outlets are optionals that are forced unwrapped. if not set it will cause it to crash.
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -23,6 +25,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         nameTextField.delegate = self
     }
 
+//Mark: UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        mealNameLabel.text = textField.text
+        
+        
+    }
+    
     
 //actions
 
@@ -32,13 +48,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
-    }
+
+
     
     
 

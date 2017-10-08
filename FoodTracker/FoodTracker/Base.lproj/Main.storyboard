@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ZLW-TC-cJx">
-                                <rect key="frame" x="16" y="40" width="343" height="80.5"/>
+                                <rect key="frame" x="16" y="40" width="343" height="351.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mn7-uY-3Ff">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -44,25 +45,25 @@
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PDz-GJ-501"/>
                                         </connections>
                                     </button>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animal03" translatesAutoresizingMaskIntoConstraints="NO" id="wh1-Vp-1vS">
+                                        <rect key="frame" x="0.0" y="80.5" width="271" height="271"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="wh1-Vp-1vS" secondAttribute="height" multiplier="1:1" id="xUN-IT-AI1"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="FNE-5W-qCb" firstAttribute="top" secondItem="Mn7-uY-3Ff" secondAttribute="bottom" id="0L5-Pl-Vyr"/>
-                                    <constraint firstItem="Mn7-uY-3Ff" firstAttribute="top" secondItem="ZLW-TC-cJx" secondAttribute="top" id="14Y-TO-HzK"/>
-                                    <constraint firstItem="Mn7-uY-3Ff" firstAttribute="leading" secondItem="ZLW-TC-cJx" secondAttribute="leading" id="8T2-IN-K46"/>
-                                    <constraint firstItem="oj2-IE-OJd" firstAttribute="leading" secondItem="ZLW-TC-cJx" secondAttribute="leading" id="FxO-3M-oM3"/>
-                                    <constraint firstItem="FNE-5W-qCb" firstAttribute="leading" secondItem="ZLW-TC-cJx" secondAttribute="leading" id="KRj-QE-t4I"/>
-                                    <constraint firstItem="oj2-IE-OJd" firstAttribute="top" secondItem="FNE-5W-qCb" secondAttribute="bottom" id="RYI-Vh-IH7"/>
-                                    <constraint firstItem="oj2-IE-OJd" firstAttribute="top" secondItem="FNE-5W-qCb" secondAttribute="bottom" id="WcP-cf-UO2"/>
-                                    <constraint firstAttribute="trailing" secondItem="oj2-IE-OJd" secondAttribute="trailing" id="X75-uF-Tgj"/>
-                                    <constraint firstItem="FNE-5W-qCb" firstAttribute="top" secondItem="Mn7-uY-3Ff" secondAttribute="bottom" id="bov-yU-VZa"/>
-                                    <constraint firstAttribute="trailing" secondItem="Mn7-uY-3Ff" secondAttribute="trailing" id="o83-9A-M4l"/>
-                                    <constraint firstAttribute="trailing" secondItem="FNE-5W-qCb" secondAttribute="trailing" id="pzs-R3-Yve"/>
+                                    <constraint firstItem="oj2-IE-OJd" firstAttribute="leading" secondItem="ZLW-TC-cJx" secondAttribute="leading" id="93I-xY-QkP"/>
+                                    <constraint firstItem="FNE-5W-qCb" firstAttribute="leading" secondItem="ZLW-TC-cJx" secondAttribute="leading" id="KeU-vv-W1D"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mn7-uY-3Ff" secondAttribute="trailing" id="gXg-IN-gwx"/>
+                                    <constraint firstAttribute="trailing" secondItem="FNE-5W-qCb" secondAttribute="trailing" id="jbv-Mr-cgu"/>
+                                    <constraint firstAttribute="trailing" secondItem="oj2-IE-OJd" secondAttribute="trailing" id="lkB-Kk-2OW"/>
+                                    <constraint firstItem="Mn7-uY-3Ff" firstAttribute="leading" secondItem="ZLW-TC-cJx" secondAttribute="leading" id="vem-Ht-2c4"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZLW-TC-cJx" secondAttribute="bottom" constant="546.5" id="8EL-wU-yIp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZLW-TC-cJx" secondAttribute="trailing" id="mmx-Zl-8aH"/>
                             <constraint firstItem="ZLW-TC-cJx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pxg-aY-VWu"/>
                             <constraint firstItem="ZLW-TC-cJx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="t8L-VC-RRf"/>
@@ -78,4 +79,7 @@
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="animal03" width="271" height="186"/>
+    </resources>
 </document>
